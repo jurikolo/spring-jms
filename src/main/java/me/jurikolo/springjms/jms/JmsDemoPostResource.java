@@ -12,6 +12,6 @@ public class JmsDemoPostResource {
 
     @JmsListener(destination = "postQueue")
     public void receivePost(DummyPost dummyPost) {
-        logger.info("Received POST from JMS" + dummyPost);
+        logger.info("Received POST from JMS with ID: " + dummyPost.getId());
     }
 }
